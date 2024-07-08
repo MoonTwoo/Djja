@@ -1,0 +1,26 @@
+Index: Jija2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Jija2.py b/Jija2.py
+--- a/Jija2.py	(revision 01cb6cd417982fc18be457c2688a6dd8a27e9825)
++++ b/Jija2.py	(revision 3e5dcebcc897de5437b30bd6143094c59262df74)
+@@ -14,9 +14,14 @@
+ #{%endif-%}
+ #{%endfor-%}'''
+ 
+-aboba = '''
+-Sum object = {{(M | max(attribute='prus')).name}}
+-'''
++# aboba = '''
++# Sum object = {{(M | max(attribute='prus')).name}}
++# '''
++
++# aboba = '''
++# {% for i in M-%}
++# {%filter upper%}i love {{i.name}}{%endfilter%}
++# {%endfor-%}'''
+ 
+ 
+ tm = Template(aboba)
