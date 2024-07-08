@@ -14,9 +14,14 @@ Moon = [{'id': 1, 'name': "Moon1", 'prus':200},
 #{%endif-%}
 #{%endfor-%}'''
 
-aboba = '''
-Sum object = {{(M | max(attribute='prus')).name}}
-'''
+# aboba = '''
+# Sum object = {{(M | max(attribute='prus')).name}}
+# '''
+
+# aboba = '''
+# {% for i in M-%}
+# {%filter upper%}i love {{i.name}}{%endfilter%}
+# {%endfor-%}'''
 
 
 tm = Template(aboba)
