@@ -18,13 +18,21 @@ Moon = [{'id': 1, 'name': "Moon1", 'prus':200},
 # Sum object = {{(M | max(attribute='prus')).name}}
 # '''
 
-aboba = '''
-{% for i in M-%}
-{%filter upper%}i love {{i.name}}{%endfilter%}
-{%endfor-%}'''
+# aboba = '''
+# {% for i in M-%}
+# {%filter upper%}i love {{i.name}}{%endfilter%}
+# {%endfor-%}'''
 
+aboba = '''
+{% macro abo (name, value ='abor', size = 20)-%}
+name ={{name}}, value ={{value}}, size = {{size}}
+{%-endmacro%}
+{{abo('pass', 'abo', 30)}}
+{{abo('ed', 40, 50)}}
+{{abo()}}
+'''
 
 tm = Template(aboba)
-msg = tm.render(M=Moon)
+msg = tm.render()
 
 print(msg)
